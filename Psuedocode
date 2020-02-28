@@ -1,0 +1,20 @@
+We are trying to build a Sudoku Solver that can solve any valid Sudoku Puzzle. 
+So let's take a step back and think about methodically.
+There should be a way to do that.
+So here is Sajad and Mohammad's plan for solving this game.
+We will use backtracking algorithm to solve this problem.
+First, we get the puzzle in string Form.
+So the puzzle should be changed into 2D number array.
+Then, define a function to find the empty positions in the array.
+Now it is time to place numbers into empty positions.
+But the number should be checked before insertion.
+To check the number we define 3 other functions.
+To check if it is valid in its row, column and block.
+The empty position is filled with the first valid number.
+Then we move on to the next empty positions and do the same.
+If there is no valid number for a position.
+Then we change back the previous empty position to a number bigger which is also valid.
+This process is done until there is no empty position left. 
+There should be a function to output the board in an ordered way.
+There should be a function to check if the board process is finished.  
+In the end, we should have a fully functional program for solving Sudoku. 
