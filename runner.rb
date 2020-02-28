@@ -1,4 +1,4 @@
-require_relative 'sudoku'
+require_relative 'lib/sudoku'
 
 # The sudoku puzzles that your program will solve can be found
 # in the sudoku_puzzles.txt file.
