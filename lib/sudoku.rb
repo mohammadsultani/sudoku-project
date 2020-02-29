@@ -22,7 +22,9 @@ class Sudoku
     @empty_cells
   end
 
-  
+  def check_row?(row, number) # It checks if that a number exist in its row.
+    !@board[row].include?(number)
+  end
 
 
 
