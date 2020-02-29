@@ -22,6 +22,7 @@ class Sudoku
     @empty_cells
   end
 
+  
 
 
 
