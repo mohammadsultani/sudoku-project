@@ -15,6 +15,7 @@ class Sudoku
       i += 9
     end
     self.board
+    # Returns a string representing the current state of the board, well formatted for output to the screen. No `puts` here!
   end
 
   def find_empty_cells # In this function we find the empty positions in the puzzle.
@@ -65,10 +66,22 @@ class Sudoku
     end
     self.board # At end, after backtracking process ends. it give us the solved board.
   end
-end
 
- # Returns a boolean indicating whether or not the provided board is solved.
- def finished?
-  !@board.all? { |row| row.include?(0) }
-end
+  def solvepuzzle # This function just recall the previouse functions.
+    start = Time.now
+    board_array
+    find_empty_cells
+    solve
+    finish = Time.now
+    dif = finish - start # It shows the time taken for solving each puzzle.
+  end
 
+
+  # Returns a boolean indicating whether or not the provided board is solved.
+  def finished?
+    !@board.all? { |row| row.include?(0) }
+  end
+
+ 
+end
+###     Run the runner file in the terminal to see the sloved puzzles.     ###

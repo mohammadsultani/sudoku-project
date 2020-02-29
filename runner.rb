@@ -18,6 +18,5 @@ board_string.each do |i|
 	p "Next sudoku input: " + i.chomp
 	game = Sudoku.new(i.chomp)
 
-	game.solve
-	puts game
+	
 end
