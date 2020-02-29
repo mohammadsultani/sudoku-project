@@ -17,6 +17,6 @@ board_string = File.readlines('sudoku_puzzles.txt')
 board_string.each do |i|
 	p "Next sudoku input: " + i.chomp
 	game = Sudoku.new(i.chomp)
-	p game.solve
+	game.solve
 	puts game
 end
