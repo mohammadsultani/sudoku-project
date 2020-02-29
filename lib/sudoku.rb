@@ -26,6 +26,10 @@ class Sudoku
     !@board[row].include?(number)
   end
 
+  def check_col?(col, number) # It checks the column for a given number.
+    @board.each { |el| return false if el[col] == number }
+    true
+  end
 
 
 
