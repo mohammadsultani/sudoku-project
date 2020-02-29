@@ -16,4 +16,39 @@ class Sudoku
     end
     self.board
   end
+
+  def find_empty_cells # In this function we find the empty positions in the puzzle.
+    @board.each_with_index { |row, row_index| row.each_with_index { |col, col_index| @empty_cells << [row_index, col_index] if col == 0 } }
+    @empty_cells
+  end
+
+  def check_row?(row, number) # It checks if that a number exist in its row.
+    !@board[row].include?(number)
+  end
+
+  def check_col?(col, number) # It checks the column for a given number.
+    @board.each { |el| return false if el[col] == number }
+    true
+  end
+
+  def check_block?(row, col, number) # Here we check if the number exist in its block.
+    row_array = @blocks_array.find { |el| el.include?(row) } # Is it in the row?
+    col_array = @blocks_array.find { |el| el.include?(col) } # Is it in the Column?
+    row_array.each { |row| col_array.each { |col| return false if @board[row][col] == number } } # How about the block it self?
+    true
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
+
