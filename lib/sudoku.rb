@@ -31,6 +31,13 @@ class Sudoku
     true
   end
 
+  def check_block?(row, col, number) # Here we check if the number exist in its block.
+    row_array = @blocks_array.find { |el| el.include?(row) } # Is it in the row?
+    col_array = @blocks_array.find { |el| el.include?(col) } # Is it in the Column?
+    row_array.each { |row| col_array.each { |col| return false if @board[row][col] == number } } # How about the block it self?
+    true
+  end
+
 
 
 
