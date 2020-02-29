@@ -66,3 +66,9 @@ class Sudoku
     self.board # At end, after backtracking process ends. it give us the solved board.
   end
 end
+
+ # Returns a boolean indicating whether or not the provided board is solved.
+ def finished?
+  !@board.all? { |row| row.include?(0) }
+end
+
