@@ -16,4 +16,25 @@ class Sudoku
     end
     self.board
   end
+
+  def find_empty_cells # In this function we find the empty positions in the puzzle.
+    @board.each_with_index { |row, row_index| row.each_with_index { |col, col_index| @empty_cells << [row_index, col_index] if col == 0 } }
+    @empty_cells
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
+
